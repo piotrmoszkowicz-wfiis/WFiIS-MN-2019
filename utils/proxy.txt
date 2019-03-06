@@ -1,0 +1,2 @@
+ssh -ND 1234 7moszkowicz@taurus.fis.agh.edu.pl
+

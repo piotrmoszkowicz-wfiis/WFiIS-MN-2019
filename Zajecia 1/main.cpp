@@ -5,7 +5,7 @@
 #include <fstream>
 
 gsl_matrix* fillMatrix(unsigned int size) {
-    const double x = 3.0;
+    const double x = 2.0;
     gsl_matrix *A = gsl_matrix_calloc(size, size);
     for(unsigned int i=0; i < size; i++) {
         for(unsigned int j=0; j < size; j++) {
@@ -148,9 +148,11 @@ int main() {
 
     printMatrix(B, 4);
 
-    gsl_matrix *C = mnozMacierz(A, B, 4);
+    gsl_matrix *C = mnozMacierz(A_cp, B, 4);
 
     printMatrix(C, 4);
+
+    std::cout << findMaxModule(A_cp, 4) << " " << findMaxModule(B, 4) << std::endl;
 
     double wsk = findMaxModule(A_cp, 4) * findMaxModule(B, 4);
 
