@@ -70,3 +70,5 @@ fabric.properties
 *.tex
 *.toc
 *.zip
+
+.DS_Store
