@@ -3,9 +3,10 @@ project(mn)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(mn "Zajecia 1/main.cpp")
+add_executable(mn "Prep Zajecia 2/Task1/main.cpp" "utils/Vector.h")
 
 include_directories(/usr/local/include)
+include_directories(./utils)
 
 target_link_libraries(mn
         m
