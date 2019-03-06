@@ -34,8 +34,8 @@ int main() {
 
     const unsigned int n = 1000;
 
-    const double beta = 0.0;
-    const double force = 0.0;
+    const double beta = 0.4;
+    const double force = 0.1;
     const double omega = 0.8;
 
     const double a1 = 1.0;
