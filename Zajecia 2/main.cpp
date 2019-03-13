@@ -12,7 +12,7 @@ void saveNeededStuffToFile(std::string &fileName, Vector *vVector, const double 
     file.open(fileName, std::ios::out);
 
     for (unsigned int i = 1; i < size + 1; i++) {
-        file << i * (*h) << "," << (*vVector)[i] << std::endl;
+        file << i * (*h) - 2 << "," << (*vVector)[i] << std::endl;
     }
 
     file.close();
@@ -57,11 +57,11 @@ int main() {
             if (xVectorValue >= -xb && xVectorValue < -xa) {
                 setB = 0.0;
             } else if (xVectorValue >= -xa && xVectorValue < 0) {
-                setB = 1.0;
+                setB = -1.0;
             } else if (xVectorValue == 0) {
                 setB = 0.0;
             } else if (xVectorValue > 0 && xVectorValue <= xa) {
-                setB = -1.0;
+                setB = 1.0;
             } else if (xVectorValue > xa && xVectorValue <= xb) {
                 setB = 0.0;
             }
