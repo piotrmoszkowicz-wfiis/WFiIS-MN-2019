@@ -16,12 +16,20 @@ public:
         m_j = j;
     }
 
+    ~Matrix() {
+        gsl_matrix_free(m_matrix);
+    }
+
     double operator()(unsigned int i, unsigned int j) const {
         return gsl_matrix_get(m_matrix, i, j);
     }
 
     void operator()(unsigned int i, unsigned int j, double value) {
         gsl_matrix_set(m_matrix, i, j, value);
+    }
+
+    void transpose() {
+        gsl_matrix_transpose(m_matrix);
     }
 
     friend std::ostream& operator<<(std::ostream& s, const Matrix& m) {

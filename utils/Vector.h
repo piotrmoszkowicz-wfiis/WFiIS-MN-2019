@@ -14,6 +14,10 @@ public:
         m_size = size;
     }
 
+    ~Vector() {
+        gsl_vector_free(m_vector);
+    }
+
     double operator[](unsigned int index) const {
         return gsl_vector_get(m_vector, index);
     }
