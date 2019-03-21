@@ -32,6 +32,10 @@ public:
         gsl_matrix_transpose(m_matrix);
     }
 
+    gsl_matrix* getMatrixPtr() const {
+        return m_matrix;
+    }
+
     friend std::ostream& operator<<(std::ostream& s, const Matrix& m) {
         for(unsigned int i = 0; i < m.m_i; i++) {
             for(unsigned int j = 0; j < m.m_j; j++) {

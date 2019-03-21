@@ -26,6 +26,10 @@ public:
         gsl_vector_set(m_vector, index, value);
     }
 
+    gsl_vector* getVectorPtr() const {
+        return m_vector;
+    }
+
     friend std::ostream& operator<<(std::ostream& s, const Vector& v) {
         for(unsigned int i = 0; i < v.m_size; i++) {
             s << "v[" << i << "] = " << (v)[i] << std::endl;
