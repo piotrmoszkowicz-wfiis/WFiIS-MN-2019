@@ -114,7 +114,7 @@ void printVector(std::array<double, 7>& x) {
 void printArray(std::array<std::array<double, 7>, 7>& x) {
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 7; j++) {
-            std::cout << "arr[" << i << "][" << j << "] = " << std::setw(8) << x[i][j] << "\t";
+            std::cout << "arr[" << i << "][" << j << "] = " << std::setw(12) << x[i][j] << "\t";
         }
         std::cout << std::endl;
     }
