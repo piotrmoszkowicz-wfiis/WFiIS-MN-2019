@@ -1,0 +1,9 @@
+set key left top
+set datafile separator ","
+set term png
+set output "plotpfp.png"
+set xlabel "Numer iteracji"
+set ylabel "Wartość p"
+set yrange [0:2.5]
+plot 'data_newton_log.csv' u 1:6 w lp lt 3 lw 2 t 'p(f) - m. Newtona', \
+     'data_sieczne_log.csv' u 1:5 w lp lt 4 lw 2 t "p(f) - m. Siecznych"

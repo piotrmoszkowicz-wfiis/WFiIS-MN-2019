@@ -1,0 +1,6 @@
+set key left top
+set datafile separator ","
+set term png
+set output "plotg.png"
+plot 'data_newton_rown.csv' u 2:4 w lp lt 3 lw 2 t 'f(x)', \
+     'data_newton_rown.csv' u 3:4 w lp lt 4 lw 2 t "f'(x)"
