@@ -23,7 +23,7 @@ double chebyshev(double xmin, double xmax, int n, int m) {
 }
 
 template<int Len>
-double lagrange(std::array<double, Len + 1> x, std::array<double, Len + 1> y, double xVal) {
+double lagrange(std::array<double, Len + 1>& x, std::array<double, Len + 1>& y, double xVal) {
     double w = 0;
     for (int j = 0; j <= Len; j++) {
         double u = 1.0;
