@@ -4,6 +4,7 @@
 
 #pragma once
 #include <iostream>
+#include <iomanip>
 
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_linalg.h>
@@ -39,7 +40,7 @@ public:
     friend std::ostream& operator<<(std::ostream& s, const Matrix& m) {
         for(unsigned int i = 0; i < m.m_i; i++) {
             for(unsigned int j = 0; j < m.m_j; j++) {
-                s << "v[" << i << "][" << j << "] = " << (m)(i, j);
+                s << "v[" << i << "][" << j << "] = " << std::setw(5) << (m)(i, j) << "\t";
             }
             s << std::endl;
         }
