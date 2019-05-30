@@ -154,7 +154,7 @@ int main() {
 
     const double deltaX = 1.0 / 100.0;
 
-    const int n1 = 21;
+    const int n1 = 8;
 
     const std::string fileNamen1 = "data_sklej_n1.csv";
     const std::string fileNamen1Cos = "data_sklej_cos_n1.csv";

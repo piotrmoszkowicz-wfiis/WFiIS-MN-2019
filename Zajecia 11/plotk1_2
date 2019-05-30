@@ -1,0 +1,6 @@
+set key left top
+set datafile separator ","
+set term png
+set output "plotk1_2.png"
+plot 'data_zaj11_8.csv' u 1:2 w p lt 3 lw 2 t 'nzab(t)', \
+     'data_zaj11_8.csv' u 1:4 w l lt 4 lw 2 t "splot(t)"

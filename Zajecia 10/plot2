@@ -1,0 +1,7 @@
+#set key left top
+set datafile separator ","
+set term png
+set output "plot2.png"
+set logscale y
+plot 'data_func2_zloty.csv' u 1:2 w l lt 4 lw 2 t 'Zloty', \
+     'data_func2_jednatrzecia.csv' u 1:2 w l lt 3 lw 2 t "1/3"
