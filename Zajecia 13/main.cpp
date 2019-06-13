@@ -187,6 +187,7 @@ int main() {
         if (n1 < 2000) {
             saveResults(fileName7, gj);
         }
+        std::cout << "n[" << i << "] = " << p[i] << std::endl;
         std::cout << "g[" << i << "] = " << gj << std::endl;
     }
 
