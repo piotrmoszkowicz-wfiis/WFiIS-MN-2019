@@ -1,0 +1,6 @@
+set xyplane -1
+set datafile separator ","
+set term png
+set output "plot4_1.png"
+set border 4095
+splot 'data_13_4.csv' u 1:2:3 w p

@@ -1,0 +1,5 @@
+set key left top
+set datafile separator ","
+set term png
+set output "plot1_2.png"
+plot 'data_13_1.csv' u 1:3 w p lt 3 lw 2 t 'korelacja'
